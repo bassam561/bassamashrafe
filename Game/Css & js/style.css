@@ -1,0 +1,649 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family:'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+    transition: all 0.3s ease;
+}
+
+img{
+    object-fit: cover;
+}
+
+body{
+    background-color: #f1f1f1;
+    overflow-x: hidden;
+}
+
+
+  /* Navbar */
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-image: url('../img/Navbar/navbar-back.png');
+}
+
+nav .nav-logo img{
+    width: 300px;
+    cursor: pointer;
+}
+
+nav .nav-list ul{
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+nav .nav-list ul li{
+    margin: 0 10px;
+}
+
+nav .nav-list ul li a{
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+nav .nav-buy button{
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    color: #fff;
+    background-color: #000;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+nav .nav-buy .nav-btn{
+    color: #000;
+    background-color: #fff;
+}
+
+  /* Navbar Menu */
+nav i{
+    display: none;
+}
+
+nav .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 200px;
+    height: 100%;
+    background: #000;
+    color: #fff;
+    transition:all 0.3s ease;
+    padding: 20px;
+    z-index: 300;
+}
+
+nav .nav-menu img{
+    margin-top: 50px;
+    width: 200px;
+}
+
+nav .nav-menu.active {
+    right: 0;
+}
+
+nav .nav-menu  ul {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    gap: 20px;
+    padding: 0;
+}
+
+nav .nav-menu  ul li {
+    list-style: none;
+}
+
+nav .nav-menu  ul li a {
+    font-size: 20px;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+nav .nav-menu  ul li a:hover,
+nav .nav-list ul li a:hover{
+    color: #222;
+}
+
+nav .nav-menu button{
+    width: 90%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #000;
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+.close-btn {
+    font-size: 20px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+   /* Madia Kwary For Navbar */
+@media screen and (max-width: 1200px) {
+    nav .nav-logo img{
+        width: 250px;
+    }
+    nav ul li a{
+        font-size: 14px;
+    }
+    nav .nav-buy button{
+        padding: 8px 18px;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    nav .nav-logo img,
+    nav .nav-list ul li a,
+    nav .nav-buy .nav-btn2{
+         display: none;
+    }
+    nav .menu-icon{
+        display: block; 
+        font-size: 40px;
+        cursor: pointer;
+        color: #fff
+    }
+    nav{
+        padding: 15px 0;
+    }
+    nav .nav-buy .nav-btn{
+        padding: 10px 30px;
+        font-weight: 600;
+        font-size: 15px;
+    }
+}
+
+
+
+
+
+  /* Home section */
+.home .home-backgrond img{
+    width: 100%;
+    height: 89vh;
+    filter: brightness(60%);
+    position: absolute;
+    z-index: -1; 
+} 
+
+.home .home-text{
+    color: #fff;
+    padding-top: 10vh;
+    padding-left: 10vh;
+}
+
+.home .home-text .home-p{
+    display: flex;
+    font-size: 20px;
+}
+
+.home .home-text h1{
+    font-size: 80px;
+}
+
+.home .home-text button{
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #000;
+    padding: 10px 25px;
+    cursor: pointer;
+    margin-right: 10px;
+    font-size: 15px;
+    font-weight: 500;
+    transition: all 0.5s ease;
+}
+
+.home .home-text .home-btn{
+    background-color: #000;
+    color: #fff;
+    border-color: #fff;
+}
+
+.home .home-text button:hover{
+    background-color: transparent;
+    color: #fff;
+    border-color: #fff;
+}
+
+.home .home-text ul{
+    display: flex;
+    align-items: center;
+}
+
+
+   /* Madia Kwary For Home Section*/
+@media screen and (max-width: 990px){
+    .home .home-text h1{
+        font-size: 65px;
+    }
+    .home .home-text .home-p{
+        font-size: 16px;
+    }
+    .home .home-text button{
+        font-size: 13px;
+    }
+    .home .home-text ul img{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 760px){
+    .home .home-text h1{
+        font-size: 80px;
+        line-height: 1;
+        width: 20%;
+    }
+    .home .home-text .home-p,
+    .home .home-text .home-btn{
+        display: none;
+    }
+    .home .home-text button{
+        font-size: 20px;
+        padding: 10px 25px;
+    }
+}
+
+@media screen and (max-width: 760px){
+    .home .home-text h1{
+        font-size: 60px;
+    }
+    .home .home-text button{
+        font-size: 15px;
+        padding: 8px 15px;
+    }
+}
+
+
+
+
+
+  /* About Section */
+.about{
+    margin-top: 115px;
+    background-image: url(../img/About/About\ backgrond.jpg);
+    width: 100%;
+    max-height: 105vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.about .about-text{
+    padding: 50px;
+}
+
+.about .about-text h1{
+    font-size: 40px;
+}
+
+.about .about-text p{
+    margin: 30px 0;
+}
+
+.about .about-text a{
+    padding: 10px 15px;
+    background-color: #000;
+    color: #fff;
+    transition: all 0.5s ease;
+}
+
+.about .about-text a:hover{
+    background-color: #fff;
+    color: #000;
+}
+
+.about .about-img img{
+    width: 50%;
+}
+
+   /* Madia Kwary For About Section*/
+@media screen and (max-width: 1400px){
+    .about .about-text p{
+       font-size:14px;
+    }
+}
+
+@media screen and (max-width: 1200px){
+    .about{
+        height: 108vh;
+    }
+    .about .about-img img{
+        width: 65%;
+    }
+    .about{
+        margin-top: 109px;
+    }
+}
+
+@media screen and (max-width: 990px){
+    .about{
+        margin-top: 199px;
+        height: 108vh;
+    }
+    .about .about-img img{
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 760px){
+    .about{
+        margin-top: 40px;
+        height: 88vh;
+    }
+    .about .about-text{
+        padding: 60px 20px;
+    }
+    .about .about-text h1{
+        font-size: 35px;
+    }
+    .about .about-text p{
+        font-size:11px;
+    }
+    .about .about-text a{
+        padding: 8px;
+        font-size: 12px;
+    }
+    .about .about-img img{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 570px){
+    .about{
+        height: 80vh;
+    }
+    .about .about-text{
+        padding: 60px 0;
+    }
+    .about .about-text h1{
+        font-size: 30px;
+    }
+    .about .about-text p br{
+        display: none;
+    }
+    .about .about-text p{
+        font-size:9px;
+    }
+    .about .about-text a{
+        padding: 8px;
+        font-size: 11px;
+    }
+}
+
+
+
+
+
+   /* Maps Section */
+.Maps{
+    width: 100%;
+    height: 95vh;
+    background-image: url(../img/MAPS/maps.png);
+    padding-top: 60px;
+}
+
+.Maps .map-head h1{
+    text-align: center;
+    color: #fff;
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.Maps .info{
+    max-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.Maps .item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    gap: 20px;
+    width: 95%;
+    margin: auto;
+}
+
+.Maps  .map {
+    width: calc(33.33% - 20px); 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.Maps .map h3{
+    color: #fff;
+}
+
+.Maps .map img {
+    width: 100%;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.Maps .map img:hover{
+    box-shadow: 0 0 100px rgba(255, 255, 255, 0.5);
+}
+
+@media screen and (max-width: 1400px){
+    .Maps{
+        height: 90vh;
+    }
+    .Maps .map-head h1{
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 1200px){
+    .Maps{
+        height: 80vh;
+    }
+    .Maps .map h3{
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .Maps .map {
+        width: calc(50% - 20px); 
+    }
+    .Maps{
+        height: 125vh;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .Maps .map {
+        width: 100%;
+    }
+    .Maps{
+        height: 70vh;
+    }
+    .Maps .map h3{
+        font-size: 19px;
+    }
+    .Maps .map {
+        display: none;
+    }
+    .Maps .map1{
+        display: block;
+    } 
+}
+
+@media screen and (max-width: 570px) {
+    .Maps{
+        height: 50vh;
+    }
+}
+
+
+
+
+/* characters */
+.characters{
+    max-width: 100%;
+    background-image:url(../img/CHARACTERS/CHARACTERS\ back.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 60px 0;
+    padding-left: 80px;
+}
+
+.characters .left ul{
+    margin: 15px 0;
+    display: flex;
+}
+
+.characters .left button{
+    padding: 8px 20px;
+    border: 2px solid #000;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+    transition:all 0.5s ease;
+}
+
+.characters .left .c-btn1{
+    background-color: #000;
+    color: #fff;
+}
+
+.characters .left button:hover{
+    background-color: #000;
+    color: #fff;
+}
+
+.characters .left h2,
+.characters .left p{
+    margin-bottom: 10px;
+}
+
+.characters .left p strong{
+   font-weight: 600;
+   cursor: pointer;
+   text-decoration: underline;
+}
+
+.characters .right img{
+    width: 800px;
+}
+
+.characters .left .MAIN,
+.characters .left .SECOND,
+.characters .right h2{
+    display: none;
+}
+
+@media screen and (max-width: 1400px){
+    .characters .right img{
+        width: 700px;
+    }
+    .characters .left button{
+        padding: 8px 15px;
+    }
+    
+    .characters .left p{
+        font-size: 14px;
+    }
+    .characters{
+        padding-left: 50px;
+    }
+}
+
+@media screen and (max-width: 1200px){
+    .characters .right img{
+        width: 600px;
+    }
+    .characters .left button{
+        padding: 8px;
+        font-size: 10px;
+    }
+    .characters .left p{
+        font-size: 12px;
+    }
+    .characters{
+        padding-left: 30px;
+    }
+    .characters .left p br{display: none;}
+}
+
+@media screen and (max-width: 990px){
+    .characters{
+      flex-direction: column;
+      text-align: center;
+    }
+    .characters ul{
+       justify-content: center;
+    }
+    .characters .left button{
+        padding: 8px 15px;
+        font-size: 15px;
+    }
+    .characters .left p{
+        padding: 0 10%;
+    }
+}
+
+@media screen and (max-width: 760px){
+    .characters{
+        flex-direction: column-reverse;
+    }
+    .characters .right h1{
+        display: block;
+    }
+    .characters .left button,
+    .characters .left h1{
+        display: none;
+    }
+    .characters .right h2{
+        display: block;
+        margin-bottom: 10px;
+    }
+    .characters .left p{
+        font-size: 11px;
+        padding: 0 5%;
+    }
+    .characters .right img{
+        width: 500px;
+    }
+}
+
+@media screen and (max-width: 570px){
+    .characters .right img{
+        width: 340px;
+    }
+    .characters .right h2,
+    .characters .left h2{
+        font-size: 16px;
+    }
+    .characters .left p{
+        font-size: 10px;
+    }
+}
+
+
+.backgrond-chek img{
+    width: 100%;
+    max-width: 100%;
+    max-height: 50vh;
+}
